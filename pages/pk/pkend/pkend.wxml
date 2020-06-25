@@ -1,0 +1,6 @@
+<!--pages/pk/pkend/pkend.wxml-->
+<view class="pk_pkend_bg" style="background-image: url('http://qbgf6efcq.bkt.clouddn.com/image/pk/pkimg/end.png');">
+<view><image class="pk_pkend_tou" id="player1" src="http://qbgf6efcq.bkt.clouddn.com/image/pk/pkimg/头像.jpg"></image></view>
+<view><image class="pk_pkend_tou" id="player2" src="http://qbgf6efcq.bkt.clouddn.com/image/pk/pkimg/头像.jpg"></image></view>
+<view class="continue_button" bindtap="continueChallenge"></view>
+</view>

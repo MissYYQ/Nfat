@@ -1,0 +1,73 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/publish/publish",
+    "pages/login/login",
+    "pages/index/comment/comment",
+    "pages/train/train",
+    "pages/train/train-classAll/classAll",
+    "pages/train/train-classDetails/classDetails",
+    "pages/pk/pkindex/pkindex",
+    "pages/pk/pkpipei/pkpipei",
+    "pages/pk/pkend/pkend",
+    "pages/pk/pking/pking",
+    "pages/mine/mine",
+    "pages/mine/mine-attention-fans/attention-fans",
+    "pages/mine/mine-dynamic/dynamic",
+    "pages/mine/mine-class/class",
+    "pages/mine/mine-shoppingCart/shoppingCart",
+    "pages/mine/mine-foodGuides/foodGuides",
+    "pages/mine/mine-foodGuides/foodIdiotIndex/IdiotIndex",
+    "pages/mine/mine-foodGuides/foodChoose/foodChooseIdiot",
+    "pages/search/search",
+    "pages/mall/mall",
+    "pages/mall/goodsSort/sort",
+    "pages/mall/goodsList/list",
+    "pages/mall/goodsDetail/detail",
+    "pages/mall/shoppingCart/cart",
+    "pages/mall/pay/pay",
+    "pages/mall/auth/auth"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#2FCA90",
+    "navigationBarTitleText": "NFat",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabBar/main1.png",
+        "selectedIconPath": "images/tabBar/main2.png"
+      },
+      {
+        "pagePath": "pages/pk/pkindex/pkindex",
+        "text": "pk",
+        "iconPath": "images/tabBar/pk1.png",
+        "selectedIconPath": "images/tabBar/pk2.png"
+      },
+      {
+        "pagePath": "pages/train/train",
+        "text": "训练",
+        "iconPath": "images/tabBar/train1.png",
+        "selectedIconPath": "images/tabBar/train2.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "商城",
+        "iconPath": "images/tabBar/shop1.png",
+        "selectedIconPath": "images/tabBar/shop2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tabBar/my1.png",
+        "selectedIconPath": "images/tabBar/my2.png"
+      }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

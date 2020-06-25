@@ -1,0 +1,33 @@
+<!--pages/login/login.wxml-->
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}"> 
+  <view class="modal-content">
+   小程序需要获取您的微信用户信息
+  </view>
+  <view class="modal-footer">
+    <button class="btn-confirm" bindtap="onConfirm" open-type="getUserInfo" data-status="confirm">确定</button>
+  </view>
+</view>
+
+
+<view class="bg">
+<!--头像-->
+<image src="http://qbgf6efcq.bkt.clouddn.com/image/pk/pkimg/未知用户.jpg" style="width:200rpx;height:200rpx;background-color:white;border-radius:200rpx;margin-top:-200rpx;"></image>
+<view class="inputview" style="flex-direction:row;">
+<image src="http://qbgf6efcq.bkt.clouddn.com/image/login/手机.png"></image>
+<input class="psd-input" placeholder-style="color:#a7dab9;font-size:30rpx;" bindinput="telenuminputover" bindfocus="focus" placeholder="输 入 手 机 号 码"/>
+</view>
+
+<view class="inputview" style="flex-direction:row;">
+<image src="http://qbgf6efcq.bkt.clouddn.com/image/login/密码.png"></image>
+<input class="psd-input" password placeholder-style="color:#a7dab9;font-size:30rpx;" bindinput="psdinputover" bindfocus="focus" placeholder="输 入 账 号 密 码"/>
+</view>
+<view class="warning" style="color:red">{{warninginfo}}</view>
+<button style="border-radius:100rpx;width:550rpx;height:70rpx;" bindtap="normallogin">登录</button>
+
+<view bindtap="weixinlogin" style="">
+<image src="http://qbgf6efcq.bkt.clouddn.com/image/login/微信.png" style="width:80rpx;height:80rpx;"></image>
+<text>微信登录</text>
+</view>
+</view>

@@ -1,0 +1,40 @@
+<view class="comment-top">{{commentNum}} 评论</view>
+<!-- <view class="comment-list" wx:for="{{comment}}" wx:key="t" wx:for-item = "it" wx:for-index="index1"  style="height:{{listHeight}}px"> -->
+<scroll-view scroll-y class="comment-container">
+	<view class="comment-list" wx:for="{{comment}}" wx:key="t" wx:for-item="it" wx:for-index="index1">
+		<view class="user-information">
+			<image mode="scaleToFill" src="{{it.commentUrl}}"></image>
+			<view>
+				<text style="color:gray">{{it.commentName}}</text>
+				<text style="color:#C0C0C0">{{it.commentTime}}</text>
+			</view>
+			<image mode="widthFix" bindtap="focusButn" data-index="{{index1}}"  class="comment-reply-img" src="http://qbgf6efcq.bkt.clouddn.com/image/index/pinglun.png"></image>
+		</view>
+
+		<view class="comment-content">{{it.commentContent}}</view>
+
+		<scroll-view scroll-y wx:if="{{it.reply.length>0}}" class='comment-content-reply' style="height:{{varyHeight<100?'auto':'100px'}};">
+			<view wx:for="{{it.reply}}" wx:key="jj" class="reply" wx:for-item ="is">
+				<text>{{is.replyName}}:</text>
+				<text>{{is.replyContent}}</text>
+			</view>
+		</scroll-view>	
+
+	</view>
+
+</scroll-view>
+<!-- <view class="comment-list" wx:for="{{comment}}" wx:key="t" wx:for-item = "it" wx:for-index="index1">
+	<image class="comment-avator" src="{{it.commentUrl}}"></image>
+	<text class="comment-name">{{it.commentName}}</text>
+	<view class="comment-date">{{it.commentTime}}</view>
+	<image bindtap="focusButn" data-index="{{index1}}" mode="scaleToFill" class="comment-reply-img" src="../../../images/pinglun.png" ></image>
+	<text class="comment-content">{{it.commentContent}}</text>
+
+	<view style="display:flex;flex-direction: column;"    class='comment-content-reply'> 
+		<text   wx:for="{{it.reply}}" wx:key="jj"  wx:for-item ="is" >{{is.replyContent}}{{is.replyName}}</text>
+	</view>
+
+</view> -->
+<view class='commentInputView' style='bottom:{{height == ""?0:height}}px;'>
+	<view class='commentInput'> <input class='input' maxlength='-1' placeholder="说点什么吧" value="{{value}}" bindfocus="inputFocus" focus='{{focusInput}}' bindblur="inputBlur" bindinput="commentReply"></input> </view> <button class='send' bindtap="{{key==0?'send':'send1'}}">发送</button>
+</view>

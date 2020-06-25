@@ -1,0 +1,160 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  margin-top: 20rpx;
+}
+.column{
+  display:flex;
+  flex-direction:column;
+}
+checkbox{
+  padding-left: 30rpx;
+  margin-top: 100rpx;
+}
+/* 未选中样式 */
+checkbox .wx-checkbox-input{
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #24c789;
+}
+/* 选中后的样式 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  width: 50rpx;
+  height: 50rpx;
+  border: none;
+  background: #24c789;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%; /* 圆角 */
+  width: 50rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 50rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 50rpx;
+  text-align: center;
+  font-size:35rpx; /* 对勾大小*/
+  font-weight: bold; /* 对勾加粗*/
+  color:#fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+}
+
+image{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 30rpx;
+}
+
+.title{
+  font-size: 10pt;
+  margin-top: 25rpx;
+}
+.color{
+  font-size: small;
+  color: #777777;
+}
+.money{
+  width: 175rpx;
+  font-size: large;
+  color: #24c789;
+  margin-top: 20rpx;
+}
+
+.amount{
+  /* padding-left: 55rpx; */
+  width: 100rpx;
+  height: 50rpx;
+  padding-top: 11rpx;
+}
+
+.amount text{
+  padding: 0 8rpx;
+  line-height: 45rpx;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 14pt;
+  font-weight: bold;
+  border: 1rpx solid #24c789;
+  height: 50rpx;
+}
+.amount text:first-child{
+  padding: 15rpx;
+  line-height: 10rpx;
+}
+.amount .disabled{
+  color: rgb(194, 191, 191);
+}
+.amount .normal{
+  color: black;
+}
+.count{
+  font-size: 12pt;
+  color: black;
+  padding: 0 20rpx;
+  margin-top: -4rpx;
+}
+
+/* 底部 */
+.bottom{
+  width: 100%;
+  height: 120rpx;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-items: center;
+}
+.bottom > checkbox{
+  margin-top: 5rpx;
+}
+.selectAll{
+  margin-left: 10rpx;
+  font-size: 13pt;
+}
+.totalText{
+  font-size: 10pt;
+  margin-left: 33rpx;
+  color: #777777;
+}
+.totalMoney{
+  font-size: 16pt;
+  color: #24c789;
+  margin-left: 20rpx;
+}
+.button{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  line-height: 112rpx;
+  position: absolute;
+  right: 0;
+  font-size: 13pt;
+}
+.delete{
+  height: 100%;
+  width: 130rpx;
+  text-align: center;
+  background-color: rgb(233, 232, 232);
+  color: rgb(182, 181, 181);
+}
+.settlement{
+  height: 100%;
+  width: 150rpx;
+  text-align: center;
+  background-color: #24c789;
+  color: white;
+}
+button{
+  border: none;
+}

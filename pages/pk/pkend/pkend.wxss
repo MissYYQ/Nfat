@@ -1,0 +1,34 @@
+/* pages/pk/pkend/pkend.wxss */
+.pk_pkend_bg
+{
+  width: 100vw;
+  height: 100vh;
+  background-size: 100%;
+  position: relative;
+}
+.pk_pkend_tou
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  position: absolute;
+  
+}
+#player1
+{
+  margin-top:165px;
+margin-left: 40px;
+}
+#player2
+{
+  margin-top:176px;
+  margin-left: 240px;
+}
+.continue_button
+{
+  position: absolute;
+  width: 115px;
+  height: 40px;
+  margin-left: 35px;
+  margin-top: 415px;
+}

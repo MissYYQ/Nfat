@@ -1,0 +1,11 @@
+<SearchInput>
+</SearchInput>
+<view class="classItem" wx:for="{{classData}}" wx:key="id" data-index="{{index}}" bindtap="toClassDetails">
+	<view wx:if="{{item.id<3}}" style="background-image: url({{item.backgroundImgUrl}})" class="backgroundImg">
+		<view class="title">{{item.title}}</view>
+		<view class="row text">
+			<view>{{item.segment}} - </view>
+			<view> {{item.duration}}</view>
+		</view>
+	</view>
+</view>

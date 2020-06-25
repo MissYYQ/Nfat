@@ -1,0 +1,37 @@
+/* pages/pk/pkpipei/pkpipei.wxss */
+view
+{
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pk_pipei_bg
+{
+  width: 100vw;
+  height: 100vh;
+  background-size: 100%;
+  position: relative;
+}
+.pk_pipei_bg > view 
+{
+  background-color: rgba(56, 56, 56, 0.61);
+  flex-direction: row;
+  height:100%;
+  width:100%;
+}
+.pk_pipei_tou
+{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50px;
+  border:3px solid rgb(42, 130, 228);
+}
+#player1
+{
+}
+#player2
+{
+
+}
