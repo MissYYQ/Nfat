@@ -1,5 +1,0 @@
-<view class="search-input">
-	<navigator url="/pages/search/search" open-type="navigate">  
-		<text class="iconfont icon-search"></text>
-	</navigator>
-</view>

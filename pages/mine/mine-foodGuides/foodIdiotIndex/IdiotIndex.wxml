@@ -1,8 +1,0 @@
-<!--pages/mine/mine-foodGuides/foodIdiotIndex/IdiotIndex.wxml-->
-<view>
-<view class="Idiot_container" wx:for="{{recipe_type}}" wx:key="type" style="height:200rpx;" data-foodType="{{index}}" bindtap="jumpToChoose">
-<view class="Idiot_proindex"><view>{{index+1}}</view></view>
-<view class="Idiot_left_container"><view>选择{{item.type}}</view><view><text wx:for="{{item.food}}" wx:key="id" wx:for-item="Foodnames" wx:for-index="FoodnamesIndex">{{Foodnames.name}}<text wx:if="{{FoodnamesIndex!=item.food.length-1}}">、</text></text></view></view>
-<view class="Idiot_right_container">共{{item.totalcal}}kcal<image src="http://qbgf6efcq.bkt.clouddn.com/image/mine/foodGuides/箭头.png" style="width:50rpx;height:50rpx;"></image></view>
-</view>
-</view>

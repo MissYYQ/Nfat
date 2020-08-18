@@ -1,5 +1,0 @@
-<!--pages/pk/pking/pking.wxml-->
-<view>
-<view class="live-pusher"><live-pusher url="rtmp://102508.livepush.myqcloud.com/live/nofat?txSecret=b36d9f5c6b612d5604f0e685abed17d0&txTime=5EE5EE39" mode="RTC" autopush bindstatechange="statechange" style="width: 100vw; height: 100vh;" /></view>
-<view class="live-player"><live-player src="rtmp://xsirl.cn/live/nofat" mode="RTC" autoplay bindstatechange="statechange" binderror="error" style="width: 200px; height: 150px;"/></view>
-</view>
