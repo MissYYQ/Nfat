@@ -1,0 +1,51 @@
+/* pages/login/login.wxss */
+view
+{
+  font-size: 30rpx;
+  font-family: monospace;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputview
+{
+  margin-top: 20rpx;
+  width:550rpx;
+  height: 100rpx;
+  border-bottom: #a7dab9 solid 1px;
+}
+button
+{
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+color:#45d28d;
+margin-bottom: 50rpx;
+}
+.inputview>image
+{
+width: 80rpx;
+height: 80rpx;
+}
+.inputview>input
+{
+  
+  margin-left: 50rpx;
+  width: 470rpx;
+  height: 100rpx;
+}
+.bg
+{
+  background-image: url("http://qbgf6efcq.bkt.clouddn.com/image/login/loginbg.png");
+  width: 100vw;
+  height: 100vh;
+  background-size: 100%;
+  position: relative;
+}
+
+
+
+

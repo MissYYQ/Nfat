@@ -1,0 +1,32 @@
+<checkbox-group wx:for="{{cart}}" wx:key="index">
+	<view class="row rowFirst">
+		<checkbox wx:if="{{isAllChecked}}" checked></checkbox>
+		<checkbox wx:else></checkbox>
+		<view class="row">
+			<image src="{{item.imgUrl}}"></image>
+			<view class="column">
+				<view class="title">{{item.title}}</view>
+				<view class="color">颜色：{{item.color}}</view>
+				<view class="row">
+					<view class="money">¥ {{item.money}}</view>
+					<view class="amount row">
+						<text class="{{item.count<=1 ? 'disabled' : 'normal'}}" bindtap="delCount" data-index="{{index}}"> - </text>
+						<view class="count">{{item.count}}</view>
+						<text class="{{item.count>=10 ? 'disabled' : 'normal'}}" bindtap="addCount" data-index="{{index}}"> + </text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</checkbox-group>
+
+<view class="bottom">
+	<checkbox bindtap="allChecked"></checkbox>
+	<text class="selectAll">全选</text>
+	<text class="totalText">总计</text>
+	<view class="totalMoney">¥ {{total}}</view>
+	<view class="button">
+		<view class="delete">删除</view>
+		<view class="settlement">结算</view>
+	</view>
+</view>

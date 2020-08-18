@@ -1,0 +1,13 @@
+/* pages/plan/plan.wxss */
+.weui-search-bar__input{
+  height: 72rpx;
+}
+.weui-icon-search_in-box{
+  top:22rpx;
+}
+.weui-search-bar__cancel-btn{
+  line-height:70rpx;
+}
+.weui-icon-clear{
+  top:4rpx;
+}

@@ -1,0 +1,109 @@
+<!--index.wxml-->
+<SearchInput></SearchInput>
+<view class="top">
+	<!-- <view class="title">首页</view> -->
+	<!-- <image class="search" src="../../images/search.png"></image> -->
+	<view class="swiper-tab">
+		<view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">推荐</view>
+		<view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">关注</view>
+		<view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">热门</view>
+	</view>
+</view>
+<!-- 首页滑动内容 -->
+<!-- 推荐 -->
+<swiper class="tall" current="{{currentTab}}" bindchange="bindChange">
+	<swiper-item class="attention">
+		<scroll-view scroll-y class="attention_out">
+			<!-- <image class="camera"  src="http://qbgf6efcq.bkt.clouddn.com/image/index/like.png"></image> -->
+			<view wx:for="{{recommend}}" wx:key="it" wx:for-item="it" class="attention_wrap">
+				<view class="info">
+					<image src="{{it.avatar}}"></image>
+					<view class="name">{{it.author}}</view>
+					<view class="{{it.attention == 0?'quguan':'guanzhu'}}" bindtap="guanzhu" data-id="{{index}}">关注</view>
+				</view>
+				<text style="margin:20rpx">{{it.content}}</text>
+				<!-- 视频区 -->
+				<view class="video">
+					<video src="{{it.videoUrl}}" class="video" object-fit="cover" hidden="{{it.videoUrl==null?true:false}}" binderror="videoErrorCallback"></video>
+					<image src="{{it.imgUrl}}" mode="aspectFill" hidden="{{it.imgUrl.length==0?true:false}}"></image>
+				</view>
+				<!-- 评论，收藏 -->
+				<view class="function">
+					<!-- 评论 -->
+					<view class="comment">
+						<image bindtap="comment" mode="aspectFit" src="../../images/tabBar/pinglun.png"></image>
+						<text >{{it.commentNum}}</text>
+					</view>
+					<!-- 点赞 -->
+					<view class="collect">
+						<!-- <image mode="aspectFit" src="../../images/tabBar/dianzan.png"></image> -->
+						<image wx:if='{{it.hit==1}}' bindtap="add" data-id="{{index}}" src="http://qbgf6efcq.bkt.clouddn.com/image/index/like.png"></image>
+						<image wx:else bindtap="add" data-id="{{index}}" src="http://qbgf6efcq.bkt.clouddn.com/image/index/_like.png"></image>
+						<text>{{it.likes}}</text>
+					</view>
+				</view>
+				<!-- 分割线 -->
+				<view class="parting"></view>
+			</view>
+		</scroll-view>
+	</swiper-item>
+
+
+	<!-- 关注 -->
+	<swiper-item class="attention">
+		<scroll-view scroll-y class="attention_out">
+			<view wx:for="{{attention}}" wx:key="it" wx:for-item="it" class="attention_wrap">
+				<view class="info">
+					<image src="{{it.avatar}}"></image>
+					<view class="name">{{it.author}}</view>
+				</view>
+				<text style="margin:20rpx">{{it.content}}</text>
+				<!-- 视频区 -->
+				<view class="video">
+					<video src="{{it.videoUrl}}" class="video" object-fit="cover" hidden="{{it.videoUrl==null?true:false}}" binderror="videoErrorCallback"></video>
+					<image src="{{it.imgUrl}}" mode="aspectFit" hidden="{{it.imgUrl.length==0?true:false}}"></image>
+				</view>
+				<!-- 评论，收藏 -->
+				<view class="function">
+					<!-- 评论 -->
+					<view class="comment">
+						<image bindtap="comment" mode="scaleToFill" src="http://qbgf6efcq.bkt.clouddn.com/image/index/pinglun.png"></image>
+						<text >{{it.commentNum}}</text>
+					</view>
+					<!-- 点赞 -->
+					<view class="collect">
+						<image wx:if='{{it.hit==1}}' bindtap="attentionAdd" data-id="{{index}}" src="http://qbgf6efcq.bkt.clouddn.com/image/index/like.png"></image>
+						<image wx:else bindtap="attentionAdd" data-id="{{index}}" src="http://qbgf6efcq.bkt.clouddn.com/image/index/_like.png"></image>
+						<text>{{it.likes}}</text>
+					</view>
+				</view>
+				<!-- 分割线 -->
+				<view class="parting"></view>
+			</view>
+		</scroll-view>
+	</swiper-item>
+
+
+	<!-- 热门 -->
+	<swiper-item class="blackground">
+		<scroll-view scroll-y>
+			<view class="hot_out">
+				<view class="hot-content" wx:for="{{hot}}" wx:key="is" wx:for-index="index" wx:for-item="it">
+					<!-- <image class="hot-content-img"  src=""></image> -->
+					<video binderror="videoErrorCallback" class="hot-content-img" object-fit="cover" src="{{it.videoUrl}}"></video>
+					<view class="hot-content-text">{{it.content}}</view>
+					<view class="hot-content-info">
+						<image src="{{it.avatar}}"></image>
+						<text>{{it.author}}</text>
+						<image wx:if='{{it.hit==1}}' bindtap="likeAdd" data-id="{{index}}" class="like-img" src="http://qbgf6efcq.bkt.clouddn.com/image/index/like.png"></image>
+						<image wx:else bindtap="likeAdd" data-id="{{index}}" class="like-img" src="http://qbgf6efcq.bkt.clouddn.com/image/index/_like.png"></image>
+						<view class="like">{{it.likes}}</view>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+	</swiper-item>
+</swiper>
+
+<!-- 发表动态 -->
+<image class="camera" bindtap="publish" src="http://qbgf6efcq.bkt.clouddn.com/image/indexcamera.png"></image>

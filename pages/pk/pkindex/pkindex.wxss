@@ -1,0 +1,42 @@
+/* pages/pk/pkindex/pkindex.wxss */
+page
+{
+  background-color: rgb(56,56,56);
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.personinfo
+{
+  z-index: 55;
+  margin-top: -255rpx;
+  width: 700rpx;
+  height: 370rpx;
+}
+
+.topimg
+{
+  z-index: 1;
+  width: 100%;
+}
+.personinfo_tou
+{
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+  z-index: 3;
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50px;
+  
+  border:3px solid rgb(128, 128, 128);
+}
+.tab_active
+{
+  background-color: rgb(24,144,255);
+}
+.tab_active text
+{
+  color: white;
+}

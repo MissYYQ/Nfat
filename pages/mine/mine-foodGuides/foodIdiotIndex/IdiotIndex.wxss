@@ -1,0 +1,58 @@
+/* pages/mine/mine-foodGuides/foodIdiotIndex/IdiotIndex.wxss */
+.Idiot_container
+{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  flex-direction: row;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100rpx;
+  width: 100%;
+  border-bottom: 1px #efefef solid;
+}
+.Idiot_container>view
+{height:100rpx;}
+.Idiot_proindex
+{
+  position: relative;
+  width: 10%;
+}
+.Idiot_proindex>view
+{
+  position: absolute;
+  top: 0rpx;
+  right: 10rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rpx;height: 40rpx;
+  border:1rpx solid #6666 ;
+  border-radius:40rpx;
+}
+.Idiot_left_container
+{
+  width: 45%;  
+  display:flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
+.Idiot_right_container
+{
+  color: #4c4650;
+  width: 45%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.Idiot_left_container>view:first-child
+{
+font-weight: normal;
+
+}
+.Idiot_left_container>view:last-child
+{
+  font-weight: normal;
+  color: #b9b9b9;
+  font-size: small;
+}

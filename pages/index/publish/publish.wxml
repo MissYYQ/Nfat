@@ -1,0 +1,14 @@
+<!--pages/index/publish/publish.wxml-->
+<view class='page'>
+  <textarea class='text' bindinput="input" placeholder="分享你的健身心得和经验吧" auto-height/>
+  <view class="image_content">
+    <view class='image'  hidden="{{img_url==''?true:false}}">
+      <image class="moment_img" mode="aspectFit" src="{{img_url}}"></image>
+    </view>
+    <view class='image' style='display:{{hideAdd?"none":"block"}}'>
+      <image bindtap="qnUpload" class="moment_img" src='http://qbgf6efcq.bkt.clouddn.com/image/indextianjia.png'></image>
+    </view>
+  </view>
+  <button bindtap="send" style='margin-right:5px;margin-left:5px'>发布</button>
+</view>
+
